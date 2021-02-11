@@ -1,0 +1,121 @@
+/* @author: Kyle Sanchez */
+/* External Citation used the w3 schools tutorials to */
+/* figure out how to use CSS (/
+/* link: https://www.w3schools.com/css/default.asp */
+body {
+   background-color: rgb(229, 255, 204);
+}
+  
+/* Added a border radius to round the image*/
+img{
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+p{
+  font-size: 25px;
+}
+
+h1 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: #555753;
+}
+table{
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+label{
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+textarea{
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 18px;
+}
+
+button {
+ font-family: "Lucida Console", "Courier New", monospace;
+}
+
+label{
+  font-size: 25px;
+}
+
+ul{
+  font-family: 'Brush Script MT', cursive;
+  font-size: 25px;
+}
+
+#orderButton{
+  font-size: 25px;
+}
+
+h4{
+  
+ 
+  /* Added a background image of Dr. Nuxoll */
+  background: transparent url(https://i1.rgstatic.net/ii/profile.image/422242241781763-1477681803592_Q512/Andrew_Nuxoll.jpg) no-repeat ;
+ 
+  
+}
+
+
+/* External Citation: Used the examples from the two sites to get my dropdown menu to display months when hovered over*/
+/* Link 1: https://stackoverflow.com/questions/58037191/mutilevel-dropdown-with-scrollbar-issue */
+/* Link 2: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover*/
+.dropbtn {
+  position: relative;
+  display: inline-block;
+  background-color: #ffd394;
+  color: black;
+  padding: 2px;
+  font-size: 23px;
+  font-weight: bold;
+  
+ 
+}
+/* External Citation: used the reference example from w3 to change position of dropdown menu with the top: and position: attributes*/
+/* Link: https://www.w3schools.com/cssref/pr_class_position.asp */
+.dropdown {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 160px;
+  width: 70px;
+  
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffd394;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+ 
+}
+
+td {
+  font-size:25px;
+  vertical-align: top;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ffd394;
+}

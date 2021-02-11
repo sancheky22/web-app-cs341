@@ -1,0 +1,110 @@
+<!-- @author Kyle Sanchez -->
+<!DOCTYPE html>
+<html>
+   <!-- External Citation:
+   < I haven't coded in html since CS203 so I used the tutorials> 
+   < on w3 schools to figure how to do everything>
+   < link: https://www.w3schools.com/html/default.asp>
+   -->
+   <head>
+      <!-- Title of html -->
+      <title>CS341 HW1</title>
+      <link rel="stylesheet" href="stylesheets/sancheky22.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src ="javascripts/websitefunctions.js"></script>
+   
+   </head>
+   <body>
+      <!-- Header of page (h1 takes precedence) -->
+      <h1>Cheesecake Order Form</h1>
+        <!-- Used the image "wikimedia cheesecake" as described in hw pdf -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" width="200" height="200">
+      <!-- Used a table to organize the drop down menu and radio buttons to be side by side -->
+      <p id="message"></p>	
+      <p id="orderdetails"></p>
+      <p id="ordernotes"></p>	
+      <table id="table1">
+       <!-- First row of the table has the Quantity and Topping labels -->
+         <tr>
+            <td>Quantity</td>
+            <td>Topping</td>
+         </tr>
+         <tr>   
+    	   <!-- First data cell has the drop down menu with quantity of cheesecakes --> 
+	         <td><select name="quantity" id="quantity">
+	            <option value="One">1</option>
+	            <option value="Two">2</option>	
+	            <option value="Three">3</option>	
+	            <option value="Four">4</option>	
+	            <option value="Five">5</option>
+            </td>
+            <!-- Second data cell has the radio buttons with the three different toppings -->
+            <!-- In order to make only one of the radio buttons to be selected at once, the -->
+            <!-- name="topping" was used for all three -->
+            <td>
+	            <input type="radio" id="topping" name="Topping" value="Plain">
+	            <label for="topping">Plain</label><br>
+	
+	            <input type="radio" id="topping" name="Topping" value="Cherry">
+     	         <label for="topping">Cherry</label><br>
+
+       	      <input type="radio" id="topping" name="Topping" value="Chocolate">
+	            <label for="topping">Chocolate</label><br>
+            </td>
+         </tr>
+      </table>	
+      <label for="notesLabel">Notes:
+      </label>
+      <br>
+      <!-- Text area with placeholder that says "Enter any special instructions here." -->
+      <textarea id="notes" name="Notes"placeholder="Enter any special instructions here."rows="5" cols="50"></textarea>
+      <br><br>
+      <button id="orderButton">Order</button>
+     
+      <table id="table2">
+      <tr>
+     		<td> <b>Orders for</td>
+		   <td> <div class="dropdown">
+ 			   <button class="dropbtn" id="monthButton"><b>Jan</button>
+  			   <div class="dropdown-content" id="months">
+   				<a href="#" data-elemid="Jan">Jan</a> 
+				   <a href="#" data-elemid="Feb">Feb</a>
+				   <a href="#" data-elemid="Mar">Mar</a>
+               <a href="#" data-elemid="Apr">Apr</a>
+				   <a href="#" data-elemid="May">May</a>
+				   <a href="#" data-elemid="Jun">Jun</a>
+				   <a href="#" data-elemid="Jul">Jul</a>
+				   <a href="#" data-elemid="Aug">Aug</a>
+				   <a href="#" data-elemid="Sep">Sep</a>
+				   <a href="#" data-elemid="Oct">Oct</a>
+				   <a href="#" data-elemid="Nov">Nov</a>
+				   <a href="#" data-elemid="Dec">Dec</a>		
+  			   </div>
+			</div>
+	     </td>
+      </tr> 
+      </table>
+
+     
+      <ul>
+         <li>11 cherry</li>
+         <li>17 chocolate</li>
+         <li>31 plain</li>
+      </ul>
+      <h4>
+      <!-- All of these breaks are for the css version of the webpage -->
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      </h4>
+   </body>
+</html>
