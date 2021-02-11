@@ -16,8 +16,8 @@ $(document).ready(function(){
 	function monthClick(){
       // NOTE: This method differs from previous iterations (Large if else block was cut down for brevity)
    
-      // gets the current value of the dropdown menu using the this keyword
-      // each month has a specific data element id that corresponds to a specific month
+      // gets the current value of the dropdown menu using the 'this' keyword
+      // each month has a specific data element ID that corresponds to a specific month
       var id = $(this).data('elemid');
       
       // Sets the text of the month drop down button to the corresponding ID of the month that was clicked
