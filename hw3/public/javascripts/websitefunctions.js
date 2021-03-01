@@ -22,6 +22,36 @@ $(document).ready(function(){
       
       // Sets the text of the month drop down button to the corresponding ID of the month that was clicked
       $('#monthButton').text(id);
+
+      // Create a post call for HW 4 specification #3
+      // External Citation: Read up on the jquery post documentation to know how to call post 
+      // Link: https://api.jquery.com/jquery.post/
+      $.post("/orders", {}, function(data, status){
+         // Iteration variable
+         var i = 0;
+         // Loop through 0-2 so we can update the Bulleted list in index.html
+         while(i<3){
+            // Changes from topping0 to topping1 to topping2
+            // This allows these values to get updated with their new hardcoded values
+            // from the JSON obj. in orders.js
+            var toppingID = "topping" + i;
+
+            // Sets the quanity to the appropriate value from the order they appear
+            // in the cheesecakeData array in routes/orders.js
+            var quantity = data[i].quantity;
+            var topping = data[i].topping;
+
+            // Call stringify on the object to get it's quantity and topping
+            converted = JSON.stringify(quantity + " " + topping);
+            // Parse this object 
+            parse = JSON.parse(converted);
+            // Updated the HTML to appropriately display the new data from routes/orders.js
+            document.getElementById(toppingID).innerHTML = parse;
+
+            // increment i to go through the three toppings and their quantities
+            i++;
+         }
+      });
       
     
    }// end of monthClick Function
