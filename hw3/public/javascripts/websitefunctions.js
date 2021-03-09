@@ -26,7 +26,7 @@ $(document).ready(function(){
       // Create a post call for HW 4 specification #3
       // External Citation: Read up on the jquery post documentation to know how to call post 
       // Link: https://api.jquery.com/jquery.post/
-      $.post("/orders", {}, function(data){
+      $.post("/orders", {month:$(this).text()},function(data){
          // Iteration variable
          var i = 0;
          // Loop through 0-2 so we can update the Bulleted list in index.html
