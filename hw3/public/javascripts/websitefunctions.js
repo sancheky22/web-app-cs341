@@ -67,6 +67,7 @@ $(document).ready(function(){
       // variables for the customers quantity and topping from dropdown menu and radio button group
       var quantity = $('#quantity option:selected').text();
       var topping = $('input[name="Topping"]:checked').val();
+      
 
       // if the word Vegan or vegan appears anywhere in the string it pops up the warning
       if(veganCheck.indexOf("Vegan") >= 0 || veganCheck.indexOf("vegan")>=0){
@@ -85,7 +86,7 @@ $(document).ready(function(){
          $("label").hide();
          $("textarea").hide();
          $('#orderButton').hide();
-
+        
          // External Citation: Referenced this page to use id's of parts of webpage to change them
          // Link: 
          // https://www.tutorialspoint.com/How-to-change-text-inside-an-element-using-jQuery
@@ -95,7 +96,11 @@ $(document).ready(function(){
          $("#message").text("Thank you! Your order has been placed");
          $("#orderdetails").text("Order Details: " + quantity + " "+ topping + " cheesecake(s)");
          $("#ordernotes").text("Additional Notes: " + veganCheck);
-
+         
+         
+         // post call when a new order is pressed
+         $.post("/neworder",{quantity: quantity, toppings: topping, notes: veganCheck},function(data,status){});
+         
 	   }
    }// End of onClick function
 

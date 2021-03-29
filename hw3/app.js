@@ -10,6 +10,9 @@ var usersRouter = require('./routes/users');
 // for HW4
 var ordersRouter = require('./routes/orders');
 
+// for HW5
+var newOrdersRouter = require('./routes/neworder');
+
 var app = express();
 
 // view engine setup
@@ -27,6 +30,9 @@ app.use('/users', usersRouter);
 
 // for HW4
 app.use('/orders',ordersRouter);
+
+// for HW5
+app.use('/neworder',newOrdersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

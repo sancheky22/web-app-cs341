@@ -12,7 +12,6 @@ var dbms = require('./dbms.js');
 // Link: https://www.w3schools.com/js/js_json_intro.asp
 // Link: https://medium.com/@sandhya.sadanandan/javascript-how-to-construct-an-array-of-json-objects-using-map-d1a513727008
 
-var plainTotal = dbms.dbquery("SELECT COUNT(TOPPING) FROM ORDERS WHERE (TOPPING='plain' AND MONTH='FEB');");
 
 // cheesecakeData to be parsed when the dropdown button is clicked
 // set data to 0 for now so it can be changed by the DB
